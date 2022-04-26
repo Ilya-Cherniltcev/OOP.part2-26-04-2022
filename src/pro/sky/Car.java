@@ -1,26 +1,25 @@
 package pro.sky;
 
-public class Car extends Transport {
+public class Car extends Transport implements Wheelable, Engineable {
 
-        public Car (String modelName, int wheelsCount) {
-            super(modelName, wheelsCount);
-        }
+    public Car(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
+    }
 
-        public Car (String modelName) {
-            super(modelName, 4);
-        }
-
+    public Car(String modelName) {
+        super(modelName, 4);
+    }
 
     @Override
     public void updateTyre() {
-        System.out.println("Поднимаем домкратом колесо");
-        System.out.println("Снимаем колесо");
+        System.out.print("###  Поднимаем домкратом колесо. ");
+        System.out.print("Снимаем колесо. ");
         System.out.println("Меняем покрышку");
     }
 
     @Override
     public void checkEngine() {
-        super.checkEngine();
+        System.out.println("###  Проверяем двигатель");
     }
 }
 

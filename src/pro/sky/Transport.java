@@ -2,19 +2,9 @@ package pro.sky;
 
 import java.util.Objects;
 
-public abstract class Transport implements ServiceActions{
+public class Transport {
     private String modelName;
     private int wheelsCount;
-
-    @Override
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
-    }
-
-    @Override
-    public void checkEngine() {
-        System.out.println("Проверяем двигатель");
-    }
 
     public Transport(String modelName, int wheelsCount) {
         this.modelName = modelName;

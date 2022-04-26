@@ -1,6 +1,6 @@
 package pro.sky;
 
-public class Bicycle extends Transport{
+public class Bicycle extends Transport implements Wheelable {
 
     public Bicycle(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
@@ -10,14 +10,8 @@ public class Bicycle extends Transport{
         super(modelName, 2);
     }
 
-
     @Override
     public void updateTyre() {
-        super.updateTyre();
-    }
-
-    @Override
-    public void checkEngine() {
-
+        System.out.println("###  Меняем покрышку");
     }
 }
